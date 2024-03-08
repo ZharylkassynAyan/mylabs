@@ -1,0 +1,120 @@
+#1
+import os
+def dir_file(path):
+    print("Dir:")
+    for entry in os.listdir(path):
+        if os.path.isdir(os.path.join(path, entry)):
+            print(entry)
+
+    print("\nFiles:")
+    for entry in os.listdir(path):
+        if os.path.isfile(os.path.join(path, entry)):
+            print(entry)
+
+    print("\nAll Dir and Files:")
+    for root, dirs, files in os.walk(path):
+        for directory in dirs:
+            print(os.path.join(root, directory))
+        for file in files:
+            print(os.path.join(root, file))
+
+path = input("Enter the path: ")
+list_directories_and_files(path)
+#2
+import os
+def kek(n):
+    if os.path.exists(n):
+        print("exist")
+    else:
+        print("dont exist")
+    if os.access(n,os.R_OK:
+        print("readable")
+    else:
+        print("not readable")
+    if os.access(n,os.W_OK:
+        print("writable")
+    else:
+        print("not writable")
+    if os.access(n,os.X_OK:
+        print("executable")
+    else:
+        print("not executable")
+        
+
+import os
+n=input("path: ")
+kek(n)
+#3
+import os
+def kek(n):
+    if os.access(n,os.F_OK):
+        print("exist")
+        dire,filename = os.path.split(n)
+        print("dir: ",dire)
+        print("filename: ",filename)
+    else:
+        print("dont exist")
+
+import os
+n=input("path: ")
+kek(n)
+#4
+import os
+def kek(f):
+    i=0
+    for x in f:
+        i+=1
+    print(i)
+
+n=input("file name: ")
+f=open(n,"r")
+kek(f)
+#5
+import os
+def kek(f):
+    n=input("write text: ")
+    f.write(n)
+    f.close()
+
+n=input("file name: ")
+f=open(n,"a")
+kek(f)
+#6
+import os
+direc="lolololo"
+os.makedirs(directory)
+i=0
+while i<26:
+    f=chr(ord("A")+i)+".txt"
+    path=ospath.join(direc,f)
+    i+=1
+    with open(path,"w"):
+        pass
+#7
+import os
+def kek(file1,filef2):
+    open(file1,"r") as f1:
+        x=f1.read()
+    open(file2,"w") as f2:
+        f2.write(x)
+
+file1=input("Enter the source file name: ")
+file2=input("Enter the destination file name: ")
+kek(file1,file2)
+#8
+import os
+def kek(path):
+    if os.access(path,os.F_OK):
+        print("file exist")
+    else:
+        print("file dont exist")
+        return
+    
+    if os.access(path,os.W_OK):
+        print("you dont have access")
+        return
+    os.remove(path)
+    print("File deleted successfully.")
+
+path=input("file name: ")
+kek(path)
