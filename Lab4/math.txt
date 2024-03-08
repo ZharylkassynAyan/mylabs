@@ -1,0 +1,20 @@
+#1
+import math
+n=int(input("n:"))
+print(round(n*math.pi/180,6))
+#2
+h=int(input("h:"))
+a=int(input("a:"))
+b=int(input("b:"))
+print((a+b)/2*h)
+#3
+import math
+sn=int(input("sidenum:"))
+sl=int(input("sidelength:"))
+p=sn*sl
+a=sl/(2*math.tan(math.pi/sn))
+print(round(p*a/2))
+#4
+h=int(input("height:"))
+sl=int(input("length:"))
+print(h*sl)

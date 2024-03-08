@@ -1,0 +1,29 @@
+#1
+import datetime
+x = datetime.datetime.now()
+y=x.day-5
+print(y)
+#2
+import datetime
+t=datetime.date.today()
+y=t -datetime.timedelta(days=1)
+tm=t + datetime.timedelta(days=1)
+print(y.strftime("%A"))
+print(t.strftime("%A"))
+print(tm.strftime("%A"))
+#3
+import datetime
+x=datetime.datetime.now()
+print(x.strftime("%X"))
+#4
+import datetime
+year = int(input("year:"))
+month = int(input("month:"))
+day = int(input("day:"))
+x1=datetime.datetime(year,month,day)
+year2 = int(input("year2:"))
+month2 = int(input("month2:"))
+day2 = int(input("day2:"))
+x2=datetime.datetime(year2,month2,day2)
+z=abs(x1-x2).total_seconds()
+print(z)

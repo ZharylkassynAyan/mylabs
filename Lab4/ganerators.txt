@@ -1,0 +1,43 @@
+#1
+N=int(input("enter the num: "))
+i=0
+while i<N:
+    print(pow(i,2))
+    i+=1
+#2
+N=int(input("enter the num: "))
+i=0
+l=[]
+while i<N:
+    if i%2==0:
+        l.append(i)
+    i+=1
+for n in l:
+    print(n,end=",")
+#3
+def dem(n):
+    for i in range(n):
+        if i%3==0 and i%4==0:
+            yield i
+
+N=int(input("Enter the number:"))
+for num in dem(N):
+    print(num,end=",")
+#4
+def kek(a,b):
+    for i in range(a,b):
+        yield pow(i,2)
+
+a=int(input("a:"))
+b=int(input("b:"))
+for num in kek(a,b+1):
+    print(num,end=",")
+#5
+def kek(n):
+    while n>=0:
+        yield n
+        n=n-1
+
+n=int(input("n:"))
+for num in kek(n):
+    print(num,end=",")
