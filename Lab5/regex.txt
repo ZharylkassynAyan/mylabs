@@ -1,0 +1,75 @@
+#1
+import re
+def kek(n):
+    m=re.search(r"ab*",n)
+    print(m)
+
+n=input("string: ")
+kek(n)
+#2
+import re
+def kek(n):
+    m=re.search(r"ab{2,3}", n)
+    print(m)
+
+n=input("string: ")
+kek(n)
+#3
+import re
+def kek(n):
+    m=re.search(r"[a-z]+_[a-z]+", n)
+    print(m)
+
+n=input(": ")
+kek(n)
+#4
+import re
+def kek(n):
+    m=re.search(r"[A-Z][a-z]+",n)
+    print(m)
+n=input(": ")
+kek(n)
+#5
+import re
+def kek(n):
+    m=re.match(r"a.*b$",n)
+    print(m)
+n=input(": ")
+kek(n)
+#6
+import re
+def kek(n):
+    m=re.sub("[ ,.]",":",n)
+    print(m)
+n=input(": ")
+kek(n)
+#7
+import re
+def kek(n):
+    m=re.sub("_","",n)
+    print(m)
+n=input(": ")
+kek(n)
+#8
+import re
+def kek(n):
+    m=re.split(r"(?=[A-Z])",n)
+    print(m)
+n=input(": ")
+kek(n)
+#9
+import re
+def kek(n):
+    m=re.sub(r"[a-z][A-Z]","/1 /2",n)
+    print(m)
+n=input(": ")
+kek(n)
+#10
+import re
+
+def kek(n):
+    m = re.sub(r"([a-z])([A-Z])", r"\1 \2", n)
+    print(m)
+
+n = input(": ")
+kek(n)
